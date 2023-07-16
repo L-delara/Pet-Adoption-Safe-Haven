@@ -5,7 +5,7 @@ const {
   createPet,
   updatePetById,
   deletePetById,
-} = require("../controllers/Pet");
+} = require("../controllers/pet");
 const Pet = require("../models/Pet");
 
 // GET / get all Pets
@@ -29,48 +29,63 @@ module.exports = router;
 router.get("/data/seed", async (req, res) => {
   const data = [
     {
+      petType: "Cat",
       petName: "Siobhan",
+      isAdopted: false,
       gender: "Female",
       breed: "Tuxedo",
-      age: "7 months",
+      color: "Black and White",
+      age: "Kitten (< 1 year)",
       image:
-        "https://e29koex2j9k.exactdn.com/wp-content/uploads/2022/11/cat-placeholder.svg",
+        "https://img.freepik.com/free-vector/cute-dog-cute-cat-cartoon-illustration_138676-3238.jpg",
       bio: "Loves tuna treats, laser pointers, and summoning otherworldly forces",
     },
     {
+      petType: "Dog",
       petName: "Boe",
+      isAdopted: true,
       gender: "Male",
       breed: "Mastiff mix",
-      age: "3 years",
+      color: "Brindle",
+      age: "Adult (2-6 years)",
       image:
-        "https://e29koex2j9k.exactdn.com/wp-content/uploads/2022/11/dog-placeholder.svg",
+        "https://img.freepik.com/free-vector/cute-dog-cute-cat-cartoon-illustration_138676-3238.jpg",
       bio: "Loves cuddles and fortune-telling. Up for any adventure!",
     },
     {
+      petType: "Dog",
       petName: "Captain",
+      isAdopted: false,
       gender: "Male",
       breed: "Lab mix",
-      age: "7 years",
+      color: "Brown",
+      age: "Senior (6+ years)",
       image:
-        "https://e29koex2j9k.exactdn.com/wp-content/uploads/2022/11/dog-placeholder.svg",
+        "https://img.freepik.com/free-vector/cute-dog-cute-cat-cartoon-illustration_138676-3238.jpg",
       bio: "Just vibin'. Will fetch anything. Ball. Shoes. Thor's Hammer.",
     },
     {
+      petType: "Cat",
       petName: "Tofu",
+      isAdopted: true,
       gender: "Female",
       breed: "Calico",
-      age: "2 years",
+      color: "Black, White, Orange",
+      age: "Adult (2-6 years)",
       image:
-        "https://e29koex2j9k.exactdn.com/wp-content/uploads/2022/11/cat-placeholder.svg",
+        "https://img.freepik.com/free-vector/cute-dog-cute-cat-cartoon-illustration_138676-3238.jpg",
       bio: "Sleep all day! Party all night!",
     },
     {
+      petType: "Dog",
       petName: "Jim-Jam",
+      isAdopted: false,
       gender: "Male",
       breed: "Heeler mix",
-      age: "10 years",
+      color: "Gray",
+      age: "Senior (6+ years)",
       image:
-        "https://e29koex2j9k.exactdn.com/wp-content/uploads/2022/11/dog-placeholder.svg",
+        "https://img.freepik.com/free-vector/cute-dog-cute-cat-cartoon-illustration_138676-3238.jpg",
       bio: "Nothing slows me down in my old age!",
     },
   ];

@@ -1,29 +1,46 @@
 const mongoose = require("mongoose");
 
 const petSchema = new mongoose.Schema({
-  category: {
+  //all pets have these fields
+  petType: {
     type: String,
-    enum: ["Dog", "Cat", "Other"],
+    enum: ["Dog", "Cat"],
+    required: true,
   },
   petName: {
     type: String,
     required: true,
   },
+  isAdopted: {
+    type: Boolean,
+    required: true,
+  },
   gender: {
     type: String,
     enum: ["Female", "Male"],
+    required: true,
   },
   breed: {
     type: String,
-    required: true,
+  },
+  color: {
+    type: String,
   },
   age: {
     type: String,
+    enum: [
+      "Puppy (< 1 year)",
+      "Kitten (< 1 year)",
+      "Young (1-2 years)",
+      "Adult (2-6 years)",
+      "Senior (6+ years)",
+    ],
   },
   image: {
     type: String,
     default:
-      "https://e29koex2j9k.exactdn.com/wp-content/uploads/2022/11/cat-placeholder.svg",
+      "https://img.freepik.com/free-vector/cute-dog-cute-cat-cartoon-illustration_138676-3238.jpg",
+    //Image by catalyststuff on Freepik
   },
   bio: {
     type: String,
